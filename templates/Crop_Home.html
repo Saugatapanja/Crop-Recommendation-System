@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            /* Custom CSS for form styling */
+            body {
+                    background-image: url('{{ url_for('static', filename='background.avif') }}');
+            }
+            .container {
+                background-color: rgba(172, 226, 241, 0.8);
+                border-radius: 10px;
+                margin-top: 30px;
+                padding: 20px;
+            }
+            .form-label {
+                font-weight: bold;
+            }
+            .form-control {
+                border: 2px solid #3498db;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .form-control:focus {
+                border-color: #2c3e50;
+                box-shadow: none;
+            }
+            .btn-primary {
+                background-color: #3498db;
+                border: none;
+            }
+            .btn-primary:hover {
+                background-color: #2980b9;
+            }
+            h2 {
+            text-align: center;
+            font-size: 28px; /* Adjust the font size */
+            color: #2c3e50; /* Text color */
+            font-weight: bold; /* Font weight */
+        }
+          /* Clock */
+            #clock{
+                font-size: 30px;
+                text-align: right;
+            }
+            /* Footer */
+            footer {
+                text-align: right;
+            }
+
+            footer p {
+                margin: 0;
+            }
+            .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+            .copyright {
+                background-color: #222;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+    <h2>Crop Recommendation System</h2>
+    <div id="clock"></div>
+
+    <script>
+    function updateClock() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    // Format the time strings
+    var timeString = hours.toString().padStart(2, '0') + ':' +
+                   minutes.toString().padStart(2, '0') + ':' +
+                   seconds.toString().padStart(2, '0');
+
+    // Update the clock element
+    var clockElement = document.getElementById('clock');
+    clockElement.textContent = timeString;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1);
+
+  </script>
+  <!-- Page Buttons -->
+    </script>
+    <div class="container">
+        <form method="POST" , action="{{url_for('home')}}">
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="N">N (Nitrogen Content)</label>
+                    <input type="text" name='a' class="form-control" id="N" placeholder="Enter N content">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="P">P (Phosphorus Content)</label>
+                    <input type="text" name='b' class="form-control" id="P" placeholder="Enter P content">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="K">K (Potassium Content)</label>
+                    <input type="text" name='c' class="form-control" id="K" placeholder="Enter K content">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="temperature">Temperature (°C)</label>
+                    <input type="text" name='d' class="form-control" id="temperature" placeholder="Enter temperature">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="humidity">Humidity (%)</label>
+                    <input type="text" name='e' class="form-control" id="humidity" placeholder="Enter humidity">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="ph">pH Level</label>
+                    <input type="text" name='f' class="form-control" id="ph" placeholder="Enter pH level">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="rainfall">Rainfall (mm)</label>
+                    <input type="text" name='g' class="form-control" id="rainfall" placeholder="Enter rainfall">
+                </div>
+            </div>
+            <center><button class="btn btn-primary" type="submit">Submit</button></center>
+        </form>
+    </div>
+    <!-- Copyright -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="footer">
+        <div class="copyright">
+            <p>&copy; 2023. All rights reserved.(Designed & Maintained by Saugata Panja)</p>
+            <p>Terms of Service | Privacy Policy | Cookie Policy</p>
+        </div>
+    </footer>
+</body>
+</html>

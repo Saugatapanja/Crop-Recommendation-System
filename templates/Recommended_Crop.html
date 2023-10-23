@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            /* Custom CSS for form styling */
+            body {
+                background-image: url('{{ url_for('static', filename='background.avif') }}');
+            }
+
+            .container {
+                background-color: rgba(172, 226, 241, 0.8);
+                border-radius: 10px;
+                margin-top: 30px;
+                padding: 20px;
+            }
+            
+            h2 {
+            text-align: center;
+            font-size: 28px; /* Adjust the font size */
+            color: #2c3e50; /* Text color */
+            font-weight: bold; /* Font weight */
+        }
+          /* Clock */
+            #clock{
+                font-size: 30px;
+                text-align: right;
+            }
+            /* Footer */
+            footer {
+                text-align: right;
+            }
+
+            footer p {
+                margin: 0;
+            }
+            .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+            .copyright {
+                background-color: #222;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+    <h2>Crop Recommendation System</h2>
+    <div id="clock"></div>
+
+    <script>
+    function updateClock() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    // Format the time strings
+    var timeString = hours.toString().padStart(2, '0') + ':' +
+                   minutes.toString().padStart(2, '0') + ':' +
+                   seconds.toString().padStart(2, '0');
+
+    // Update the clock element
+    var clockElement = document.getElementById('clock');
+    clockElement.textContent = timeString;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+
+  </script>
+  <!-- Page Buttons -->
+    </script>
+    <div class="container">
+        <body bgcolor=#fcf4dd>
+            <center>
+                {%if data == 'apple'%}
+                <div>
+                    <img src='static\apple.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Apple</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'banana'%}
+                <div>
+                    <img src='static\banana.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Banana</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'blackgram'%}
+                <div>
+                    <img src='static\blackgram.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Blackgram</h3>
+                    </div>
+                </div>
+                
+                {%elif data == 'chickpea'%}
+                <div>
+                    <img src='static\chickpea.webp' width="300" height="200">
+                    <div class="container">
+                        <h3>Chickpea</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'coconut'%}
+                <div>
+                    <img src='static\coconut.webp' width="300" height="200">
+                    <div class="container">
+                        <h3>Coconut</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'coffee'%}
+                <div>
+                    <img src='static\coffee.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Coffee</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'cotton'%}
+                <div>
+                    <img src='static\cotton.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Cotton</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'grapes'%}
+                <div>
+                    <img src='static\grapes.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Grapes</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'jute'%}
+                <div>
+                    <img src='static\jute.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Jute</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'kidneybeans'%}
+                <div>
+                    <img src='static\kidneybeans.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Kidneybeans</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'lentil'%}
+                <div>
+                    <img src='static\lentil.webp' width="300" height="200">
+                    <div class="container">
+                        <h3>Lentil</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'maize'%}
+                <div>
+                    <img src='static\maize.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Maize</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'mango'%}
+                <div>
+                    <img src='static\mango.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Mango</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'mothbeans'%}
+                <div>
+                    <img src='static\mothbeans.avif' width="300" height="200">
+                    <div class="container">
+                        <h3>Mothbeans</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'mungbean'%}
+                <div>
+                    <img src='static\mungbean.webp' width="300" height="200">
+                    <div class="container">
+                        <h3>Mungbean</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'muskmelon'%}
+                <div>
+                    <img src='static\muskmelon.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Muskmelon</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'orange'%}
+                <div>
+                    <img src='static\orange.avif' width="300" height="200">
+                    <div class="container">
+                        <h3>Orange</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'papaya'%}
+                <div>
+                    <img src='static\papaya.webp' width="300" height="200">
+                    <div class="container">
+                        <h3>Papaya</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'pigeonpeas'%}
+                <div>
+                    <img src='static\pigeonpeas.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Pigeonpeas</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'pomegranate'%}
+                <div>
+                    <img src='static\pomegranate.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Pomegranate</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'rice'%}
+                <div>
+                    <img src='static\rice.webp' width="300" height="200">
+                    <div class="container">
+                        <h3>Rice Plant</h3>
+                    </div>
+                </div>
+
+                {%elif data == 'watermelon'%}
+                <div>
+                    <img src='static\watermelon.jpg' width="300" height="200">
+                    <div class="container">
+                        <h3>Watermelon</h3>
+                    </div>
+                </div>
+
+                {%endif%}
+    
+                <br><br>
+                <a href='/' class="btn btn-primary" type="back">BACK</a>
+            </center>
+        </body>
+    </div>
+    <!-- Copyright -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="footer">
+        <div class="copyright">
+            <p>&copy; 2023. All rights reserved.(Designed & Maintained by Saugata Panja)</p>
+            <p>Terms of Service | Privacy Policy | Cookie Policy</p>
+        </div>
+    </footer>
+</body>
+</html>
