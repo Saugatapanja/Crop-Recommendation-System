@@ -7,7 +7,7 @@ This repository contains a project called Crop Recommendation System using Ensem
 ![Screenshot 2023-10-23 172427](https://github.com/Saugatapanja/Crop-Recommendation-System/assets/103821949/75d15e9a-6700-4d11-b83d-c8c4205e08a7)
 
 
-![Uploading Screenshot 2023-10-23 172514.png…]()
+![Screenshot 2023-10-23 172514](https://github.com/Saugatapanja/Crop-Recommendation-System/assets/103821949/ebfdb9e6-4eab-4907-b83a-a480f5c7d809)
 
 
-![Uploading Screenshot 2023-10-23 172537.png…]()
+![Screenshot 2023-10-23 172537](https://github.com/Saugatapanja/Crop-Recommendation-System/assets/103821949/183a036b-9804-4b43-848f-49a777787b54)
